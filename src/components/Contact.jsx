@@ -34,38 +34,26 @@ export default function Contact() {
           viewport={viewportOptions}
         >
           {CONTACTS.map((c) => (
-            <motion.a
-              key={c.label}
-              href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => { e.preventDefault(); window.location.href = c.href; }}
-              variants={fadeUp}
-              className="contact-link flex items-center gap-4 px-5 py-4 rounded-[18px] backdrop-blur-md"
-              style={{ background: 'var(--glass)', border: '1px solid var(--glass-border)', transformStyle: 'preserve-3d' }}
-              whileHover={{
-                y: -6,
-                rotateX: -3,
-                rotateY: 2,
-                borderColor: 'rgba(108,99,255,0.4)',
-                boxShadow: '0 16px 48px rgba(108,99,255,0.2)',
-                transition: { duration: 0.3, ease: [0.34, 1.56, 0.64, 1] },
-              }}
-              whileTap={{ scale: 0.97, rotateX: 4 }}
-            >
-              <motion.div
-                className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
-                style={{ background: 'rgba(108,99,255,0.12)', border: '1px solid rgba(108,99,255,0.2)' }}
-                whileHover={{ scale: 1.15, rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
+            <motion.div key={c.label} variants={fadeUp}>
+              <a
+                href={c.href}
+                className="contact-link flex items-center gap-4 px-5 py-4 rounded-[18px] backdrop-blur-md"
+                style={{ background: 'var(--glass)', border: '1px solid var(--glass-border)', display: 'flex' }}
               >
-                {c.icon}
-              </motion.div>
-              <div>
-                <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--text-3)] mb-0.5">{c.label}</div>
-                <div className="text-[14px] font-semibold text-[var(--text)]">{c.value}</div>
-              </div>
-              <span className="contact-arrow">↗</span>
-            </motion.a>
+                <motion.div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                  style={{ background: 'rgba(108,99,255,0.12)', border: '1px solid rgba(108,99,255,0.2)' }}
+                  whileHover={{ scale: 1.15, rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
+                >
+                  {c.icon}
+                </motion.div>
+                <div>
+                  <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--text-3)] mb-0.5">{c.label}</div>
+                  <div className="text-[14px] font-semibold text-[var(--text)]">{c.value}</div>
+                </div>
+                <span className="contact-arrow">↗</span>
+              </a>
+            </motion.div>
           ))}
         </motion.div>
       </div>

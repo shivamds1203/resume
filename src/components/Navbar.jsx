@@ -38,8 +38,8 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-[rgba(3,4,10,0.82)] backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
-          : ''
+        ? 'bg-[rgba(3,4,10,0.82)] backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_32px_rgba(0,0,0,0.4)]'
+        : ''
         }`}
     >
       <div className="max-w-[1140px] mx-auto px-6 py-[18px] flex items-center justify-between gap-4">
@@ -58,7 +58,7 @@ export default function Navbar() {
             Shivam D Suryawanshi
           </span>
           <span className="text-[11px] text-[var(--text-3)] tracking-[0.05em]">
-            Software Engineer · Cybersecurity &amp; Cloud
+            Software Engineer
           </span>
         </motion.button>
 

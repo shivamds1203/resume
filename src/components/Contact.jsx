@@ -37,6 +37,9 @@ export default function Contact() {
             <motion.a
               key={c.label}
               href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => { e.preventDefault(); window.location.href = c.href; }}
               variants={fadeUp}
               className="contact-link flex items-center gap-4 px-5 py-4 rounded-[18px] backdrop-blur-md"
               style={{ background: 'var(--glass)', border: '1px solid var(--glass-border)', transformStyle: 'preserve-3d' }}

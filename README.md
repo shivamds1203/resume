@@ -2,7 +2,7 @@
 
 Personal portfolio website built with **React 18**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
 
-🌐 **Live:** [shivam-suryawanshi.netlify.app](https://shivam-suryawanshi.netlify.app) <!-- update when deployed -->
+🌐 **Live:** [shivam-suryawanshi.netlify.app](https://resume-shivam.vercel.app/) <!-- update when deployed -->
 
 ---
 
